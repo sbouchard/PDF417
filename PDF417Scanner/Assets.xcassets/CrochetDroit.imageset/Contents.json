@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "crochetSucces.png",
+      "filename" : "CrochetDroit.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "crochetSucces@2x.png",
+      "filename" : "CrochetDroit@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "crochetSucces@3x.png",
+      "filename" : "CrochetDroit@3x.png",
       "scale" : "3x"
     }
   ],

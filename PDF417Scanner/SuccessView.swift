@@ -3,7 +3,7 @@
 //  PDF417Scanner
 //
 //  Created by Sylvain Bouchard on 2016-07-28.
-//  Copyright © 2016 Sylvain Bouchard. All rights reserved.
+//  Copyright © 2016 Solutions Waizu inc. All rights reserved.
 //
 
 import UIKit
@@ -43,7 +43,7 @@ class SuccessView: UIView{
         circleLayer.strokeEnd = 1.0
         circleLayer.addAnimation(animation, forKey: "strokeEnd")
     }
-
+    
     func animateCheckMark(duration: NSTimeInterval) {
         
         let centerPoint = CGPoint(x: (frame.size.width / 2.0)-35, y: (frame.size.height / 2.0))
@@ -61,14 +61,14 @@ class SuccessView: UIView{
         pathLayer.fillColor = nil
         pathLayer.lineWidth = 5.0
         pathLayer.lineJoin = kCALineJoinBevel
-
+        
         self.layer.addSublayer(pathLayer)
         
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         animation.duration = duration
         animation.fromValue = 0.0
         animation.toValue = 1.0
-
+        
         pathLayer.addAnimation(animation, forKey: "strokeEnd")
     }
     

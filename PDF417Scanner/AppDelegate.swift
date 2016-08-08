@@ -3,7 +3,7 @@
 //  PDF417Scanner
 //
 //  Created by Sylvain Bouchard on 2016-07-27.
-//  Copyright © 2016 Sylvain Bouchard. All rights reserved.
+//  Copyright © 2016 Solutions Waizu inc. All rights reserved.
 //
 
 import UIKit

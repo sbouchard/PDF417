@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -14,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1DK-Na-N69"/>
+                        <segue destination="3rr-7w-wN5" kind="relationship" relationship="rootViewController" id="phM-0K-R5i"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xUh-18-2P8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -22,62 +23,82 @@
             <point key="canvasLocation" x="-795" y="138"/>
         </scene>
         <!--SCAN PDF417-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="PWJ-1j-SOq">
             <objects>
-                <viewController title="SCAN PDF417" id="BYZ-38-t0r" customClass="ViewController" customModule="PDF417Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="SCAN PDF417" id="3rr-7w-wN5" customClass="ScannerViewController" customModule="PDF417Scanner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="uaq-ba-g1K"/>
+                        <viewControllerLayoutGuide type="bottom" id="D1F-NV-YsP"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="efd-wd-5Mg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9WX-oc-gId">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQ0-uB-ZIf">
                                 <rect key="frame" x="0.0" y="150" width="600" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="kgs-fu-SvV">
+                                    <constraint firstAttribute="height" constant="300" id="I57-yW-yIU">
                                         <variation key="heightClass=compact" constant="200"/>
                                     </constraint>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CrochetGauche" translatesAutoresizingMaskIntoConstraints="NO" id="7ot-tQ-HZE">
+                                <rect key="frame" x="40" y="245" width="26" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="26" id="BrJ-eV-4eq"/>
+                                    <constraint firstAttribute="height" constant="110" id="qt3-gi-LYC"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CrochetDroit" translatesAutoresizingMaskIntoConstraints="NO" id="avl-4a-582">
+                                <rect key="frame" x="534" y="245" width="26" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="888-SC-rVv"/>
+                                    <constraint firstAttribute="width" constant="26" id="Fg7-i2-7NP"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9WX-oc-gId" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="39g-Qn-Il2"/>
-                            <constraint firstItem="9WX-oc-gId" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5sR-Uu-ehL"/>
-                            <constraint firstAttribute="trailing" secondItem="9WX-oc-gId" secondAttribute="trailing" id="hLk-x6-iLg"/>
-                            <constraint firstItem="9WX-oc-gId" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wAq-Kj-wjH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="avl-4a-582" secondAttribute="trailing" constant="20" id="4Pp-vb-lNg"/>
+                            <constraint firstItem="7ot-tQ-HZE" firstAttribute="leading" secondItem="efd-wd-5Mg" secondAttribute="leadingMargin" constant="20" id="Gfw-RF-ami"/>
+                            <constraint firstItem="7ot-tQ-HZE" firstAttribute="centerY" secondItem="efd-wd-5Mg" secondAttribute="centerY" id="J2U-7I-TgR"/>
+                            <constraint firstAttribute="trailing" secondItem="KQ0-uB-ZIf" secondAttribute="trailing" id="OI7-aU-dQm"/>
+                            <constraint firstItem="avl-4a-582" firstAttribute="centerY" secondItem="efd-wd-5Mg" secondAttribute="centerY" id="Ud5-wT-5xC"/>
+                            <constraint firstItem="KQ0-uB-ZIf" firstAttribute="centerY" secondItem="efd-wd-5Mg" secondAttribute="centerY" id="Zc3-NI-pqo"/>
+                            <constraint firstItem="KQ0-uB-ZIf" firstAttribute="leading" secondItem="efd-wd-5Mg" secondAttribute="leading" id="Zc7-XN-sDw"/>
+                            <constraint firstItem="KQ0-uB-ZIf" firstAttribute="centerX" secondItem="efd-wd-5Mg" secondAttribute="centerX" id="oEP-lx-asx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="PDF 417" id="XKo-RE-CI8"/>
+                    <navigationItem key="navigationItem" title="PDF 417" id="Zoe-94-JAu"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <segue destination="6NT-Nw-GBK" kind="show" identifier="showResult" id="S46-iT-O8l"/>
+                        <outlet property="leftHandleImageView" destination="7ot-tQ-HZE" id="ulf-pO-8d6"/>
+                        <outlet property="rightHandleImageView" destination="avl-4a-582" id="0lu-tq-Zke"/>
+                        <segue destination="3C5-um-G2W" kind="show" identifier="showResult" id="8zV-gm-nxv"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8jG-rU-pBp" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-32" y="125"/>
         </scene>
         <!--Result Table View Controller-->
-        <scene sceneID="IZL-1m-S3m">
+        <scene sceneID="LVF-ii-b0s">
             <objects>
-                <tableViewController id="6NT-Nw-GBK" customClass="ResultTableViewController" customModule="PDF417Scanner" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="7j3-ey-EhD">
+                <tableViewController id="3C5-um-G2W" customClass="ResultTableViewController" customModule="PDF417Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="TbJ-SC-Nyf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dataCell" textLabel="XCi-Jy-h5D" style="IBUITableViewCellStyleDefault" id="Dpd-42-8iy">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dataCell" textLabel="7nE-dR-P9d" style="IBUITableViewCellStyleDefault" id="9h9-lm-Yb1">
+                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dpd-42-8iy" id="Kbj-kw-Xsg">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9h9-lm-Yb1" id="nqa-22-Ow6">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XCi-Jy-h5D">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7nE-dR-P9d">
                                             <rect key="frame" x="15" y="0.0" width="570" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -89,14 +110,18 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="6NT-Nw-GBK" id="wRe-8J-nI5"/>
-                            <outlet property="delegate" destination="6NT-Nw-GBK" id="ihQ-kO-y2z"/>
+                            <outlet property="dataSource" destination="3C5-um-G2W" id="URm-L5-otb"/>
+                            <outlet property="delegate" destination="3C5-um-G2W" id="0mT-Az-V5U"/>
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eel-kH-6Aa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xeN-5C-vDs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1356" y="230"/>
+            <point key="canvasLocation" x="882" y="146"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CrochetDroit" width="26" height="110"/>
+        <image name="CrochetGauche" width="26" height="110"/>
+    </resources>
 </document>
